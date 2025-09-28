@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuition Zone - Expert Tuition for All Subjects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Load Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --color-primary: #FFCC00; /* Yellow */
+            --color-secondary: #C0392B; /* Red/Maroon */
+            --color-dark: #2C3E50; /* Dark Blue/Grey */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+            color: var(--color-dark);
+        }
+        .bg-primary { background-color: var(--color-primary); }
+        .bg-secondary { background-color: var(--color-secondary); }
+        .text-primary { color: var(--color-primary); }
+        .text-secondary { color: var(--color-secondary); }
+        .hero-clip {
+            /* Creates the diagonal cut at the bottom of the hero section */
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        /* Custom responsive margin for the feature grid to give more space on small screens */
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -5px rgba(44, 62, 80, 0.15);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-lg sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <div class="text-3xl font-extrabold text-secondary tracking-tight">
+                Tuition <span class="text-primary">Zone</span>
+            </div>
+            <!-- Updated Navigation Links -->
+            <nav class="hidden md:flex space-x-8 font-semibold">
+                <a href="#available-tuition" class="hover:text-secondary transition duration-150">Available Tuition</a>
+                <a href="#features" class="hover:text-secondary transition duration-150">Features</a>
+                <a href="#levels" class="hover:text-secondary transition duration-150">Levels</a>
+                <a href="#contact" class="px-4 py-2 bg-secondary text-white rounded-full hover:bg-red-700 transition duration-150 shadow-md">Contact Us</a>
+            </nav>
+            <!-- Mobile Menu Button (Hamburger Icon) -->
+            <button class="md:hidden text-gray-700 hover:text-secondary transition duration-150">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-primary pt-16 pb-24 md:pt-24 md:pb-32 hero-clip shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between">
+                <!-- Text Content -->
+                <div class="lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
+                    <h1 class="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-tight mb-6">
+                        Expert Tuition <br> for <span class="text-secondary">All Subjects</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-dark font-medium mb-8 max-w-lg mx-auto lg:mx-0">
+                        Stop falling behind. Unlock your potential with qualified university tutors—online and in-person, nationwide.
+                    </p>
+                    
+                    <!-- NEW: Three Primary Call-to-Action Buttons -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 max-w-2xl mx-auto lg:mx-0">
+                        <!-- Primary CTA: Apply For Tuition -->
+                        <a href="https://forms.gle/apply-tuition-placeholder" target="_blank" class="text-center px-6 py-3 bg-secondary text-white text-lg font-bold rounded-full shadow-xl hover:bg-red-700 transition duration-300 transform hover:scale-105">
+                            Apply For Tuition
+                        </a>
+                        <!-- Secondary CTA: Hire Tutor -->
+                        <a href="https://forms.gle/hire-tutor-placeholder" target="_blank" class="text-center px-6 py-3 bg-white text-secondary text-lg font-bold rounded-full shadow-xl hover:bg-gray-100 transition duration-300 transform hover:scale-105 border-2 border-secondary">
+                            Hire Tutor
+                        </a>
+                        <!-- Tertiary CTA: Be a Tutor -->
+                        <a href="https://forms.gle/be-a-tutor-placeholder" target="_blank" class="text-center px-6 py-3 bg-dark text-white text-lg font-bold rounded-full shadow-xl hover:bg-gray-700 transition duration-300 transform hover:scale-105 sm:col-span-2 xl:col-span-1">
+                            Be a Tutor
+                        </a>
+                    </div>
+                    <p class="text-xs text-dark/70 mt-4 lg:text-left text-center">
+                        *Links will open external Google Forms.
+                    </p>
+                </div>
+
+                <!-- Image Placeholder (Inspired by uploaded images) -->
+                <div class="lg:w-1/2">
+                    <div class="w-full max-w-md mx-auto aspect-square rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)] bg-white p-4">
+                        <img src="https://placehold.co/400x400/C0392B/FFFFFF?text=Qualified+University+Tutors" 
+                             alt="Student holding books, representing Tuition Zone services"
+                             class="w-full h-full object-cover rounded-2xl"
+                             onerror="this.src='https://placehold.co/400x400/C0392B/FFFFFF?text=Start+Learning';"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- NEW SECTION: Available Tuition Anchor/CTA Section -->
+    <section id="available-tuition" class="py-16 md:py-20 bg-white shadow-inner">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-dark mb-4">
+                Available Tuition
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+                We connect students with the best tutors across all subjects, mediums (English, Bangla, Madrasah), and levels (School, College, University) throughout Bangladesh.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://forms.gle/apply-tuition-placeholder" target="_blank" class="px-8 py-3 bg-secondary text-white font-bold rounded-full shadow-lg hover:bg-red-700 transition duration-300 transform hover:scale-105">
+                    <i data-lucide="book-open-check" class="w-5 h-5 inline mr-2"></i> Apply For Tuition Now
+                </a>
+                <a href="https://forms.gle/be-a-tutor-placeholder" target="_blank" class="px-8 py-3 bg-gray-200 text-dark font-bold rounded-full shadow-lg hover:bg-gray-300 transition duration-300 transform hover:scale-105">
+                    <i data-lucide="users-round" class="w-5 h-5 inline mr-2"></i> Join Our Tutor Team
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features Section -->
+    <section id="features" class="py-20 md:py-28 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-center text-dark mb-16">
+                Why Choose Tuition Zone?
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1: Qualified Tutors -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary">
+                    <i data-lucide="graduation-cap" class="w-10 h-10 text-secondary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Qualified University Tutors</h3>
+                    <p class="text-gray-600">
+                        Learn from meritorious university students and experienced tutors who excel in their fields.
+                    </p>
+                </div>
+
+                <!-- Feature 2: Flexible Schedule -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary">
+                    <i data-lucide="calendar-check" class="w-10 h-10 text-secondary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Flexible & Personalized</h3>
+                    <p class="text-gray-600">
+                        Get personalized lessons tailored to your specific needs and a schedule that fits your life.
+                    </p>
+                </div>
+
+                <!-- Feature 3: Mediums and Subjects -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary">
+                    <i data-lucide="book-open-text" class="w-10 h-10 text-secondary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">All Subjects, All Mediums</h3>
+                    <p class="text-gray-600">
+                        We cover Science, Commerce, Arts, English Medium, Bangla Medium, and Madrasah curriculums.
+                    </p>
+                </div>
+
+                <!-- Feature 4: Online & Offline -->
+                <div class="feature-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-secondary">
+                    <i data-lucide="globe" class="w-10 h-10 text-secondary mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Nationwide Support</h3>
+                    <p class="text-gray-600">
+                        Benefit from robust Online support and convenient In-Person/Home Tuition options across Bangladesh.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Levels & Pricing CTA -->
+    <section id="levels" class="py-20 md:py-28 bg-primary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
+                <!-- Levels List -->
+                <div class="lg:w-1/2 mb-8 lg:mb-0 lg:pr-10">
+                    <h2 class="text-4xl font-extrabold text-secondary mb-6">
+                        Education for Every Level
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        From foundational learning to advanced degrees, we provide comprehensive support.
+                    </p>
+                    <ul class="space-y-3 text-lg font-medium text-dark">
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mr-3 flex-shrink-0"></i>
+                            School (Foundation to SSC/O-Level)
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mr-3 flex-shrink-0"></i>
+                            College (HSC/A-Level)
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mr-3 flex-shrink-0"></i>
+                            University (Undergraduate Programs)
+                        </li>
+                        <li class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-green-600 mr-3 flex-shrink-0"></i>
+                            Specialized/Admission Tests
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CTA Card -->
+                <div class="lg:w-1/2 p-6 md:p-10 bg-secondary rounded-2xl text-center shadow-2xl">
+                    <h3 class="text-3xl font-bold text-white mb-4">Affordable Rates</h3>
+                    <p class="text-white/90 text-xl mb-6">
+                        Get the best quality tuition at the most competitive and budget-friendly rates.
+                    </p>
+                    <div class="text-4xl font-extrabold text-primary mb-6">
+                        Easy Learning, Excellent Results!
+                    </div>
+                    <a href="https://forms.gle/apply-tuition-placeholder" target="_blank" class="inline-block px-8 py-3 bg-primary text-secondary text-lg font-bold rounded-full hover:bg-yellow-300 transition duration-300 shadow-xl transform hover:scale-105">
+                        Apply For Tuition
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="py-20 md:py-28 bg-dark text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-4 text-primary">
+                Ready to Learn and Excel?
+            </h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                Contact us today to discuss your academic needs and find the right tutor. Your child's education is our responsibility.
+            </p>
+
+            <div class="flex flex-col md:flex-row justify-center gap-8">
+                <!-- Call/WhatsApp CTA -->
+                <a href="tel:01XXXXXXXXX" class="flex flex-col items-center p-6 bg-secondary rounded-xl shadow-2xl hover:bg-red-700 transition duration-300 w-full md:w-1/3 max-w-xs mx-auto">
+                    <i data-lucide="phone" class="w-8 h-8 mb-3"></i>
+                    <span class="text-2xl font-bold">Call / WhatsApp</span>
+                    <span class="text-lg mt-1 text-primary">01XXXXXXXXX</span> <!-- Placeholder number -->
+                </a>
+
+                <!-- Facebook CTA -->
+                <a href="https://www.facebook.com/tuitionzone25/" target="_blank" class="flex flex-col items-center p-6 bg-gray-700 rounded-xl shadow-2xl hover:bg-blue-600 transition duration-300 w-full md:w-1/3 max-w-xs mx-auto">
+                    <i data-lucide="facebook" class="w-8 h-8 mb-3"></i>
+                    <span class="text-2xl font-bold">Message Us</span>
+                    <span class="text-lg mt-1 text-gray-300">Facebook Page</span>
+                </a>
+            </div>
+
+            <p class="text-sm text-gray-500 mt-16">
+                &copy; 2024 Tuition Zone. All Rights Reserved. | Bangladesh's First Complete Tuition Platform.
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Smooth Scrolling for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
